@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Real Time Chat</title>
+        <link rel="stylesheet" type="text/css" href="/layout.css" />
+        <script src="https://thinhrealchat.herokuapp.com/socket.io/socket.io.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="function.js"></script>
+    </head>
+
+    <body>
+        <div id="container">
+            <div id="loginForm">
+                <h3>What's Your Name:</h3>
+                <input type="text" name="name" id="userName" />
+                <input type="button" class="btn" id="btnRegister" value="Register" />
+            </div>
+            <div id="chatBox">
+                <div id="left">
+                    <div id="boxTitle">User Online</div>
+                    <div id="boxContent"></div>
+                </div>
+                <div id="right">
+                    <div id="sayHello">
+                        Hello <span id="currentUser"></span>
+                        <input type="button" class="btn" id="btnLogout" value="Logout" />
+                    </div>
+                    <div id="listMessage"></div>
+                    <div id="notification"></div>
+                    <input type="text" id="txtMessage" />
+                    <input type="button" class="btn" value="Send" id="btnSend" />
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
