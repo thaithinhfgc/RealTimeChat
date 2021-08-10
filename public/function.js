@@ -19,7 +19,7 @@ socket.on('Server-send-success-message', function (userName) {
 
 socket.on('Server-send-message', function (data) {
     $('#listMessage').append("<div id='mess'>" + data.un + ": " + data.mess + "</div>");
-
+    $('#txtMessage').html("");
 });
 
 socket.on('Someone-typing-message', function (data) {
@@ -46,7 +46,7 @@ $(document).ready(function () {
 
     $('#btnSend').click(function () {
         socket.emit('Client-send-message', $('#txtMessage').val());
-        $('#txtMessage').html("");
+
     });
 
     $('#txtMessage').focusin(function () {
